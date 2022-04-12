@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+  <form action="pagamento" method="POST">
+
+    <h4 class="mb-3">Pagamento</h4>
+
+    <h5 > Valor: R$ {{ valor }}</h5>
+
+    
+
+          <div class="my-3">
+            <div class="form-check">
+                    <input id="pg_local" name="pagamento" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Pagar no Local</label>
+            </div>
+            <div class="form-check">
+                    <input id="pg_pix" name="pagamento" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Pix</label><h6>85.365.968/0001-22</h6>
+                    <br>
+                    <label>Selecione o comprovante para enviar</label>
+                    <br>
+                    <br>
+                    <input id="upload" multiple accept=".jpg,.gif,.png" type="file" name="envia_comprovante" >
+              
+            </div>
+          </div>
+              
+          <input class="btn btn-outline-dark" type="submit" value="Finalizar Agendamento" >
+
+        </form>
+
+        {% endblock %}

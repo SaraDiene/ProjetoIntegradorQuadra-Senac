@@ -1,0 +1,64 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+<form action="contato" method="POST">
+
+<div class="container container_corpo">
+
+            <div class="p-3">
+                <h1 class="text-center">CONTATO</h1>
+               
+            </div>
+
+
+            <h3 class="text-danger ml-3">{{mensagem_email}}</h3>
+            <div class="shadow">
+
+            <div>
+                <label class="form-label ml-3 mt-3">Nome</label>
+                <span class="text-danger">*</span>
+                <br>
+                <input type="text" name="nome" class="ml-3 mb-2" required oninvalid="this.setCustomValidity('Informe seu nome')" 
+                onchange="try{setCustomValidity('')}catch(e){}">
+            </div>
+            
+            <div>
+                <label class="form-label ml-3">Email</label>
+                <span class="text-danger">*</span>
+                <br>
+                <input type="email" name="email" class="ml-3 mb-2" required oninvalid="this.setCustomValidity('Informe seu email')" 
+                onchange="try{setCustomValidity('')}catch(e){}">
+            </div>
+            
+            <div>
+                <label class="form-label ml-3">Telefone</label>
+                <span class="text-danger">*</span>
+                <br>
+                <input type="text" name="telefone" class="ml-3 mb-2" required oninvalid="this.setCustomValidity('Informe seu telefone')" 
+                onchange="try{setCustomValidity('')}catch(e){}">
+            </div>
+
+            <div>
+                <label class="form-label ml-3">Assunto</label>
+                <span class="text-danger">*</span>
+                <br>
+                <input type="text" name="assunto" class="ml-3 mb-2" required oninvalid="this.setCustomValidity('Informe o assunto')" 
+                onchange="try{setCustomValidity('')}catch(e){}">
+            </div>
+            
+            <div>
+                <label class="form-label ml-3">Mensagem</label>
+                <span class="text-danger">*</span>
+            </div>
+
+            <div>
+                <textarea name="mensagem" id="" cols="130" rows="10" class="ml-3 mb-2" required oninvalid="this.setCustomValidity('O que gostaria de nos dizer?')" 
+                onchange="try{setCustomValidity('')}catch(e){}"></textarea>
+            </div>
+        </div>
+
+            <input type="submit" name="" id="" value="ENVIAR" class="mt-4 mb-3 ml-3">
+    </form>
+</div>
+{%endblock%}

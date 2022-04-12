@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container-fluid">
+
+    
+        <div class="row container">
+            <div class="col-md-6">
+                
+                <img src="../static/img/bola fut login.png" alt="" class="img-fluid my-5 img_login">
+                
+
+
+            </div>
+
+            <div class="col-md-6">
+                <h1 class="m-5">Acesse sua conta</h1>
+
+                <form action="login" method="POST" class="form-group was-validated">
+                    <label class="ml-5">Login</label>
+
+                    <input type="email" name="email" id="email" class="d-block ml-5 mt-2" placeholder="Digite seu email" required>                    
+
+                    <label class="ml-5 mt-3">Senha</label>
+
+                    <input type="password" name="senha" class="d-block ml-5 mt-2" placeholder="Digite sua senha" required>
+
+                    <span class="ml-5 text-danger">{{mensagem}} </span>                  
+
+                     <input type="submit" name="" id="" value="ENTRAR" class=" d-block ml-5 mt-4">
+                        
+                     
+                     
+                     <a href="#" class="d-block ml-5 mt-4">Esqueci minha senha</a>
+
+                     <span class=" d-block ml-5 mt-3"> Ainda não tem cadastro? <a href="cadastro">Cadastre-se aqui</a> </span>
+                    
+                </form>
+            </div>
+
+        
+    </div>
+
+</div>
+
+{% endblock %}

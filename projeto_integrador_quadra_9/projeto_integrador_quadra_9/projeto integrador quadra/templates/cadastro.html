@@ -1,0 +1,70 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+<title>Cadastro</title>
+<div class="container mt-5 container_corpo">
+
+    <h1 class="text-center mb-5">Cadastro</h1>
+    
+<form  action="cadastro" method="POST">
+    
+        <div class="form-row" >
+
+            <div class="form-group col-md-4">
+                    <span class="text-danger">*</span>
+                    <label class="form-label">Nome Completo</label>
+                    <input class="form-control " type="text" name="nome_cadastro" required>
+            </div>
+
+            <div class="form-group col-md-4">
+                    <span class="text-danger">*</span>
+                    <label class="form-label">CPF</label>
+                    <input class="form-control" type="text" name="cpf_cadastro" required maxlength="11" minlength="11"> 
+            </div>
+
+            <div class="form-group col-md-4">
+                    <span class="text-danger">*</span>
+                    <label>Telefone</label>
+                    <input class="form-control" type="tel" name="tel_cadastro" required maxlength="11"  minlength="9">
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <span class="text-danger">*</span>
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email"  name="email_cadastro" required>
+            </div>
+            <div class="form-group col-md-6">
+                <span class="text-danger">*</span>
+                <label class="form-label">Confirmar Email</label>
+                <input class="form-control" type="email"  name="confirma_email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            
+            <div class="form-group col-md-6">
+                <span class="text-danger">*</span>
+                <label class="form-label">Senha</label>
+                <input class="form-control" type="password" name="senha_cadastro" required minlength="6">
+            </div>
+            <div class="form-group col-md-6">
+                <span class="text-danger">*</span>
+                <label class="form-label">Confirmar Senha</label>
+                <input class="form-control" type="password" name="confirma_senha" required minlength="6" >
+            </div>
+
+        </div>
+
+                <div class="box-actions my-4" >    
+                    <button class="btn btn-dark" type="submit" >Finalizar Cadastro</button> 
+                </div>
+</form>
+</div>
+
+{%endblock%}

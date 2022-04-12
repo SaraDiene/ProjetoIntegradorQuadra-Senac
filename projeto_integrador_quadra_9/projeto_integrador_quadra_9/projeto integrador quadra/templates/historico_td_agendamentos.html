@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form action="historico_agendamentos" method="POST">
+
+<div class="container container-corpo">
+<h1>Histórico Agendamentos</h1>
+
+<label>Filtro Por Data</label>
+<input type="date" name="filtro_data">
+
+<table class="table table-light table-striped text-center">
+
+    <thead>
+      <tr class="">
+        <th scope="col">Quadra</th>
+        <th scope="col">Data</th>
+        <th scope="col">Horário</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="">
+
+        {% for agenda in lista_agenda %}
+
+        <td scope="row">{{   agenda.tipo_quadra   }}</td>
+        <td scope="row">{{   agenda.data.strftime('%d/%m/%Y')   }}</td>
+        <td scope="row">{{   agenda.horario   }}</td>
+        <td scope="row">{{   agenda.valor    }}</td>
+        <td scope="row">{{   agenda.email   }}</td>
+      </tr>
+        {% endfor %}
+    </tbody> 
+  </table>
+
+</div>
+
+</form>
+
+{% endblock %}

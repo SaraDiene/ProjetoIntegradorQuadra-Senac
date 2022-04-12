@@ -1,0 +1,4 @@
+88b14b - verde
+ff9841 - laranja
+838383 - cinza
+272727 - cinza escuro

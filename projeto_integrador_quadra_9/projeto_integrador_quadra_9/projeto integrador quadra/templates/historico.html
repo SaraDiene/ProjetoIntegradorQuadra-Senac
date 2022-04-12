@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form action="historico" method="POST">
+
+  <div class="container container-corpo">
+    <h1>RESERVAS</h1>
+    <span>Filtro por data aqui</span>
+</form>
+
+<table class="table table-light table-striped text-center">
+ 
+    <thead>
+      <tr class="">
+        <th scope="col" hidden>Id</th>
+        <th scope="col">Quadra</th>
+        <th scope="col">Data</th>
+        <th scope="col">Horário</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Email</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="">
+
+       {% for agenda in lista_agenda %}
+
+       <td scope="row" hidden>{{   agenda.id   }}</td>
+        <td scope="row">{{   agenda.tipo_quadra   }}</td>
+        <td scope="row">{{   agenda.data }}</td>
+        <td scope="row">{{   agenda.horario   }}</td>
+        <td scope="row">{{   agenda.valor    }}</td>
+        <td scope="row">{{   agenda.email   }}</td>
+
+        <td>
+          <form action="excluir_agendamento" method="Post">
+            <input type="text" value="{{ agenda.id }}" id="exclui_agendamento" name="exclui_agendamento" hidden>
+            <input type="submit" id="exclui_agendamento" class="btn btn-outline btn-danger" value="Cancelar">
+          </form>  
+        </td>
+      
+      </tr>
+        {% endfor %}
+    </tbody> 
+</table>
+
+</div>
+
+
+{%endblock%}
