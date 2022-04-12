@@ -4,7 +4,7 @@ from email.message import EmailMessage
 
 
 EMAIL_LOGIN = 'quadrasoccerbrasil@gmail.com'
-EMAIL_SENHA = 'admin@123456'
+EMAIL_SENHA = '******'
 
 def recebe_parametros(assunto,nome,email,telefone,informacoes):
     criar_email = f'Nome: {nome}\nEmail: {email}\nTelefone: {telefone}\n{informacoes}'
