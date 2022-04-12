@@ -2,24 +2,36 @@
 {%extends 'index.html'%}
 
 {%block content%}
-<title>Funcionamento</title>
-
 
 <form action="funcionamento">
-        
-    <h1>FUNCIONAMENTO</h1>
+    <div class="container container_corpo">
+        <h1 class="text-center p-5">Funcionamento</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="text-center mb-4">Quadra</h3>
 
-    <P> <h2>Quadra</h1>
+                    <p class="text-center">Segunda-feira : FECHADO </p>
+                    <p class="text-center">Terça-feira a Domingo : 08:00 ás 22:00 Hrs</p>
+            </div>
 
-        Segunda-feira : FECHADO
-        Terça-feira a Domingo : 08:00 ás 22:00 Hrs
-    </P>
+            <div class="col-md-4">
+                <h3 class="text-center mb-4">Lanchonte</h3>
 
-    <P> <h2>Lanchonte</h1>
+                    <p class="text-center">Segunda-feira : FECHADO </p>
+                    <p class="text-center">Terça-feira a Domingo : 10:00 ás 22:00 Hrs </p>
 
-        Segunda-feira : FECHADO
-        Terça-feira a Domingo : 10:00 ás 22:00 Hrs
-    </P>
+            </div>
 
+            <div class="col-md-4">
+                <h3 class="text-center mb-4">Playground</h3>
+                    <p class="text-center">Segunda-feira: FECHADO</p>
+                    <p class="text-center">Terça-feira a Domingo: 10:00 ás 22:00 Hrs</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    
     </form>
     {%endblock%}

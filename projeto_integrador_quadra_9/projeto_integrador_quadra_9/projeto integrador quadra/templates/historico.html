@@ -5,8 +5,7 @@
 <form action="historico" method="POST">
 
   <div class="container container-corpo">
-    <h1>RESERVAS</h1>
-    <span>Filtro por data aqui</span>
+    <h1 class="text-center mb-5">Reservas</h1>
 </form>
 
 <table class="table table-light table-striped text-center">
@@ -29,7 +28,7 @@
 
        <td scope="row" hidden>{{   agenda.id   }}</td>
         <td scope="row">{{   agenda.tipo_quadra   }}</td>
-        <td scope="row">{{   agenda.data }}</td>
+        <td scope="row">{{   agenda.data.strftime('%d/%m/%Y') }}</td>
         <td scope="row">{{   agenda.horario   }}</td>
         <td scope="row">{{   agenda.valor    }}</td>
         <td scope="row">{{   agenda.email   }}</td>

@@ -93,17 +93,6 @@ def abre_administrador():
         return render_template('administrador.html', lista_usuario = usuario.select_todos_usuarios(),titulo = "Administrador")
     return redirect(url_for('abre_login')) 
     
-'''
-@app.route('/pesquisar', methods = ['POST'])
-def pesquisa_contato():
-    if 'username' in session:
-        nome_pesquisado = request.form['pesquisar']
-        usuario = Usuario()
-        lista = usuario.filtra_contatos_agenda(nome_pesquisado)
-        return render_template('administrador.html', lista_usuario = lista)
-    return redirect(url_for('abre_login'))
-'''
-        
 @app.route('/excluir_usuario', methods = ['POST'])
 def exclui_usuario():
     if 'username' in session:

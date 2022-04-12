@@ -3,18 +3,9 @@
 
 {%block content%}
 <div class="container container-corpo">
-  <form action="administrador" method="POST">
-
-    <input type="search" name="pesquisar" id="">
-    <input type="submit" name="" id="" value="Pesquisar">
-
-  </form>
-  
-  
-  <h3 class="text-center">Usuários Registrados</h3>
-
+  <form action="administrador">
+  <h3 class="text-center mb-3">Usuários Registrados</h3>
   <div class="shadow">
-
       <table class="table text-center">
           <thead>
             <tr class="">
@@ -23,55 +14,25 @@
               <th scope="col">Email</th>
             </tr>
           </thead>
-      
           <tbody>
             <tr>
-      
               {% for usuarios in lista_usuario %}
-      
               <td scope="row">{{   usuarios.nome   }}</td>
               <td scope="row">{{   usuarios.telefone  }}</td>
               <td scope="row">{{   usuarios.email  }}</td>          
               <td>
                 <form action="excluir_usuario" method="Post">
-
                   <input type="text" value="{{ usuarios.email}}" id="exclui_usuario" name="exclui_usuario" hidden>
-
                   <button type="submit" id="exclui_usuario" class="btn_excluir">
                     <span class="material-icons">delete</span>
                   </button>
-
                 </form>  
-
               </td>         
             </tr>
                {% endfor %}
           </tbody> 
         </table>
   </div>
+  </form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {%endblock%}

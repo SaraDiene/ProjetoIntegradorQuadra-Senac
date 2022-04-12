@@ -1,3 +1,4 @@
+import email
 import mysql.connector as bd
 import criptografia as cp
 
@@ -82,17 +83,6 @@ class Usuario:
             objeto_usuarios = Usuario(nome=usuario[1],cpf=None,telefone=usuario[2],email=usuario[3],senha=None,grupo=None)
             lista.append(objeto_usuarios)
         return lista
-        '''
-    def filtra_contatos_agenda(self,nome):
-        banco = BancoDados()
-        conexao = banco.get_conexao()
-        COMANDO_SELECT = 'select * from usuarios where nome like %s'
-        valor = (nome,)
-        manipulador = conexao.cursor()
-        manipulador.execute(COMANDO_SELECT,valor)
-        return manipulador.fetchall()
-        '''
-
 
     def exclui_usuario(self,email):
 
